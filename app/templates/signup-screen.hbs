@@ -1,0 +1,27 @@
+    <header class="fixed">
+        <h1>{{eventName}}</h1>
+    </header>
+    <article class="content scrollable header">
+        <p>{{description}}</p>
+        <form>
+        <p><input id="email" type="email" name="email" placeholder="{{emailLabel}} "></input></p>
+        <section data-type="list">
+        <ul data-type="edit">
+            {{#each kpis}}
+                <li>
+                    <label class="pack-checkbox">
+                        <input type="checkbox" class="kpi-list" name="{{id}}-kpi" value="{{id}}"></input>
+                        <span></span>
+                    </label>
+                    <a href="#">
+                        <p>{{name}}</p>
+                        
+                    </a>
+                </li>
+            {{/each}}
+        </ul>
+        </section>
+        </form>
+        <br>
+        <button class="recommend go-subscribe-action">{{actionButtonLabel}}</button>
+    </article>
