@@ -1,3 +1,5 @@
-Mais sobre compatibilidade Web
+Mais sobre compatibilidade Web:
+
+* http://webcompat.com
 
 
