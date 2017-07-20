@@ -5,7 +5,8 @@ var config = {
     progressLabel: "Loading Data...",
 	actionButtonLabel: "Send information",
 	goBackButtonLabel: "Back",
-    emailIntro: `Oi,\n\nHere is the information you requested from the Mozilla Community.\n\n`,
+    emailIntro: `Oi,\n\nHere is the information you requested from the Mozilla Community:`,
+    emailEnding: `Keep Rocking The Free Web\nMozilla Community\n`,
     emailSubject: "[Mozilla Community] Handy Links",
 	kpis: [
 		{id: "webcompat", name: "Web Compatibility"},

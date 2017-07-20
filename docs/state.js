@@ -34,7 +34,6 @@ var state = {
             deserialize: function(value) {return value} // we're not loading JSON
         }).then(function(result) {
             console.log("url", url);
-            console.log("kpi", result);
             state.setKPIData(kpi, result);
             if (state.downloadQueue.length > 0) {
                 return state.loadKPI();
@@ -63,16 +62,15 @@ var state = {
             });
 
             if (i > -1) {
-                acc += config.kpis[i].data;
+                acc += config.kpis[i].data + `\n`;
             }
 
             return acc;
 
-        })
+        }, "")
         console.log(config.kpis);
-        var body = encodeURI(`${config.emailIntro}\n\n${KPIContent}`);
+        var body = encodeURI(`${config.emailIntro}\n\n${KPIContent}\n\n${config.emailEnding}`);
         var url = `mailto:${email}?subject=${subject}&body=${body}`;
         window.location.href = url;
-        console.log(url);
     }
 }

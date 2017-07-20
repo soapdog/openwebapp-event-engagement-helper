@@ -1,16 +1,17 @@
-Aqui estão alguns links para aprender mais sobre WebVR:
+### WEB VIRTUAL REALITY ###
+
+Some links to learn more about WebVR:
 
 * https://blog.mozvr.com/webvr-1-0-available-in-firefox-nightly/
-
 * https://hacks.mozilla.org/2016/03/introducing-the-webvr-1-0-api-proposal/
+* https://aframe.io
 
-Abaixo temos um boilerplate de WebVR:
+Boilerplate for WebVR:
 
 * https://github.com/borismus/webvr-boilerplate/
 
-Exemplos:
+Sample code:
 
 * https://webvr.info/samples/
-
 * https://aframe.io/examples/
 

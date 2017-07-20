@@ -1,14 +1,16 @@
-Como começar a desenvolver jogos com HTML5:
-* Mozilla Developer Network - Hub de GameDev: https://developer.mozilla.org/en-US/docs/Games
-* Introdução ao desenvolvimento de jogos: https://developer.mozilla.org/en-US/docs/Games/Introduction
+### WEB GAME DEVELOPMENT ###
+
+Starting Game Development with HTML5:
+* Mozilla Developer Network - GameDev Hub: https://developer.mozilla.org/en-US/docs/Games
+* Introduction to game development for the Web: https://developer.mozilla.org/en-US/docs/Games/Introduction
 * Engines and Tools: https://developer.mozilla.org/en-US/docs/Games/Tools/Engines_and_tools
 
-Links úteis:
+Useful Links:
 
-* Melhor biblioteca para criação de jogos 2D: https://phaser.io
-* Forum sobre desenvolvimento de jogos com HTML5: www.html5gamedevs.com
-* Biblioteca para desenvolvimento 2D: http://impactjs.com/ 
-* Sistema para desenvolvimento 3D: http://unity3d.com
+* Most popular Game Development Library for 2D games: https://phaser.io
+* Forum for HTML5 Game Development: www.html5gamedevs.com
+* Another library for 2D game development: http://impactjs.com/ 
+* System for 3D Game Development: http://unity3d.com
 
 
 
