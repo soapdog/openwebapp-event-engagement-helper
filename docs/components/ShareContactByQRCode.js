@@ -41,6 +41,8 @@ var ShareContactByQRCode = {
                 padding: 0,
                 size: size,
             });
+        } else {
+            m.route.set("/info");
         }
     },
     view: function(vnode)  {
