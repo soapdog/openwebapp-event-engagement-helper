@@ -2,7 +2,8 @@
 <html>
 	<head>
 		<title>Event Engagement Helper</title>
-		<meta charset="utf8">
+        <meta charset="utf8">
+        <link rel="manifest" href="/manifest.json">
         <meta name="viewport" content="width=device-width, user-scalable=no">
 
         <!--
@@ -27,20 +28,23 @@
         <link rel="stylesheet" href="new_blocks/transitions.css">
 
         <!-- font awesome -->
-        <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css"/>
+        <link rel="stylesheet" href="vendor/font-awesome.css"/>
 
         <!-- our customizations css -->
         <link href="custom.css" rel="stylesheet" type="text/css">
 
-		
-		<script defer src="vendor/jquery/dist/jquery.min.js"></script>
-		<script defer src="vendor/handlebars/handlebars.min.js"></script>
-		<script defer src="vendor/async/dist/async.min.js"></script>
-        <script defer src="vendor/marked/marked.min.js"></script>
-				
-		<script defer src="config.js"></script>
-		<script defer src="templates.js"></script>
-		<script defer src="app.js"></script>
+		<!-- vendor -->
+		<script src="vendor/mithril.js"></script>
+
+        <!-- components -->
+        <script src="components/LoadingView.js"></script>
+        <script src="components/ListView.js"></script>
+        <script src="components/SuccessView.js"></script>
+
+        <!-- App launch -->
+        <script src="config.js"></script>
+        <script src="state.js"></script>
+		<script defer src="routes.js"></script>
 	</head>
 	<body>
     <section role="region" id="app" data-position="current">

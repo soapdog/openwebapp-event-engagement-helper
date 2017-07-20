@@ -5,6 +5,14 @@ html, body {
     background-color: #f4f4f4;
 }
 
+header {
+    background-color: #b93c5a;
+background-image: -webkit-linear-gradient(206deg, #f05556, #b93c5a 50%);
+background-image: -o-linear-gradient(206deg, #f05556, #b93c5a 50%);
+background-image: linear-gradient(296deg, #f05556, #b93c5a 50%);
+color: #fff;
+}
+
 #index {
     height: 100%;
 }

@@ -1,19 +1,20 @@
 var config = {
-	eventName: "BrazilJS 2016",
-	description: "Saiba mais sobre WebVR, Jogos e Compatibilidade Web",
+	appTitle: "Engagement Helper",
+	description: "Some handy links related to the conference topics.",
 	emailLabel: "e-mail",
-    progressLabel: "Assinando:",
-	actionButtonLabel: "Enviar informações",
-	goBackButtonLabel: "Voltar",
-    emailIntro: `Oi,\n\nAqui estão as informações que você pediu para a gente na BrazilJS 2016.\n\n`,
-    emailSubject: "[BRAZILJS/MOZILLA] Informações sobre desenvolvimento",
+    progressLabel: "Loading Data...",
+	actionButtonLabel: "Send information",
+	goBackButtonLabel: "Back",
+    emailIntro: `Oi,\n\nHere is the information you requested from the Mozilla Community.\n\n`,
+    emailSubject: "[Mozilla Community] Handy Links",
 	kpis: [
-		{id: "webcompat", name: "Compatibilidade Web"},
+		{id: "webcompat", name: "Web Compatibility"},
+        {id: "devtools", name: "Firefox Dev Tools"},
 		{id: "webvr", name: "WebVR"},
-		{id: "gamedev", name: "Desenvolvimento de jogos"},
-        {id: "community", name: "Comunidade Mozilla Brasil"}
+		{id: "gamedev", name: "Game Development"},
+        {id: "community", name: "Joining Mozilla Community"}
 		
 	],
-	successMsg: "Enviamos um email com links para saber mais sobre os tópicos escolhidos!",
-	errorMsg: "Não foi possível enviar os dados :-("
+	successMsg: "Just sent you a message with your choosen topics!",
+	errorMsg: "Can't send the info :-("
 }
