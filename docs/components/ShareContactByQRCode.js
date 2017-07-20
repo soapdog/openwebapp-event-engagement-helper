@@ -28,7 +28,8 @@ var ShareContactByQRCode = {
                 mecard += `URL:${data.site};`
             } 
 
-            var size = vnode.dom.offsetWidth - 40;
+            var size = window.screen.width;
+            console.log(size)
 
             const qr = new QRious({
                 element: document.getElementById('qrcode'),
@@ -37,7 +38,7 @@ var ShareContactByQRCode = {
                 foreground: 'black',
                 foregroundAlpha: 0.8,
                 level: 'H',
-                padding: 25,
+                padding: 0,
                 size: size,
             });
         }
