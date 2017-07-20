@@ -1,7 +1,29 @@
+/**
+ * STATE MANAGEMENT
+ * 
+ * This is a crude hack. If I was rebuilding this, I would have not built it this way but this app evolved from
+ * a very simple PoC and I don't want to refactor at the moment.
+ * 
+ * This file deals with state management in the app. It is a silly global object that handles all the app state. 
+ * The main difference between it and the config object is that except for the KPI data, the config object is not
+ * supposed to change while the app is running, on the other hand the state object changes a lot.
+ * 
+ * The key state items managed:
+ * - The drawer menu state (open or closed)
+ * - The KPI (aka topics) loading
+ * - The email sending
+ * 
+ * If a refactor ever happens, parts of this state management would go to their respective components. When this app 
+ * started, it was a single component and a single state object, in hindsight that was not smart (but it was fast).
+ * 
+ * Still even with the blasfemous existence of this global object, the app still easy to manage...
+ */
+
 var state = {
     status: "loading",
     downloadQueue: [],
     selectedKPIs: [],
+    drawerOpen: false,
     addToQueue: function(kpi) {
         this.selectedKPIs.push(kpi);
     },

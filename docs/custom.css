@@ -236,3 +236,18 @@ div[role="slider"] > label.icon {
 img {
     width: 80%;
 }
+
+.drawer-open {
+    transform: translateX(80%);
+}
+
+h2.separator {
+      font-family: sans-serif;
+      padding: 0.4rem 3rem;
+      margin: -0.1rem 0 0.9rem;
+      border: solid 0.1rem #e8e8e8;
+      color: #666;
+      font-size: 1.8rem;
+      font-weight: 300;
+      background-color: #fff;
+    }

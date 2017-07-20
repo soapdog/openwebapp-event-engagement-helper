@@ -1,5 +1,15 @@
-m.route(document.getElementById("app"), "/loading", {
+m.route(document.body, "/loading", {
     "/loading": LoadingView,
-    "/list": ListView,
-    "/success": SuccessView
+    "/success": SuccessView,
+
+    "/share-topics-by-email": ShareTopicsByEmail,
+    "/share-contact-by-email": ShareTopicsByEmail,
+
+    "/share-urls-by-qr-code": ShareTopicsByEmail,
+    "/share-contact-by-qr-code": ShareContactByQRCode,
+
+    "/info": PersonalContactInformation,
+    "/export": ShareTopicsByEmail,
+    "/analytics": ShareTopicsByEmail,
+    "/about": About
 });

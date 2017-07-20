@@ -6,19 +6,21 @@ var LoadingView = {
     onupdate: function(vnode) {
         console.log("doneeeee!");
         if (state.status == "loaded") {
-            m.route.set("/list");
+            m.route.set("/share-topics-by-email");
         }
     },
     view: function(vnode) {
         return [
-            m("header.fixed", [
-                m("h1", config.appTitle)
-            ]),
-            m("article.content.scrollable.header", [
-                m(".center", [
-                    m("i.fa.fa-hourglass-half.fa-5x.fa-spin"),
-                    m("p", config.progressLabel)
+            m("section[role=region]", [
+                m("header", [
+                    m("h1", config.appTitle)
                 ]),
+                m("article.content.scrollable.header", [
+                    m(".center", [
+                        m("i.fa.fa-hourglass-half.fa-5x.fa-spin"),
+                        m("p", config.progressLabel)
+                    ]),
+                ])
             ])
         ]
     }

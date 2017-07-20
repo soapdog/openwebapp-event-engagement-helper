@@ -10,11 +10,15 @@
         Gaia Building Blocks Styles
         learn more about Gaia Building Blocks at:
         http://buildingfirefoxos.com/building-blocks/
+
+        New MDN location for docs:
+        https://developer.mozilla.org/en-US/docs/Archive/B2G_OS/Firefox_OS_apps/Building_blocks/1.x
         -->
         <link href="new_blocks/util.css" rel="stylesheet" type="text/css">
         <link href="new_blocks/fonts.css" rel="stylesheet" type="text/css">
         <link href="new_blocks/transitions.css" rel="stylesheet" type="text/css">
         <link href="new_blocks/style/headers.css" rel="stylesheet" type="text/css">
+        <link href="new_blocks/style/drawer.css" rel="stylesheet" type="text/css">
         <link href="new_blocks/style/buttons.css" rel="stylesheet" type="text/css">
         <link href="new_blocks/style/switches.css" rel="stylesheet" type="text/css">
         <link href="new_blocks/style/lists.css" rel="stylesheet" type="text/css">
@@ -23,23 +27,26 @@
         <link href="new_blocks/style/input_areas.css" rel="stylesheet" type="text/css">
         <link href="new_blocks/icons/styles/action_icons.css" rel="stylesheet" type="text/css">
 
-
-        <!-- Transitions -->
-        <link rel="stylesheet" href="new_blocks/transitions.css">
-
-        <!-- font awesome -->
-        <link rel="stylesheet" href="vendor/font-awesome.css"/>
-
         <!-- our customizations css -->
         <link href="custom.css" rel="stylesheet" type="text/css">
 
 		<!-- vendor -->
-		<script src="vendor/mithril.js"></script>
+        <script src="vendor/mithril.js"></script>
+        <script src="vendor/marked.js"></script>
+        <script src="vendor/qrious.js"></script>
+        <link rel="stylesheet" href="vendor/font-awesome.css"/>
 
-        <!-- components -->
+
+        <!-- mithril-based app components -->
+        <script src="components/Header.js"></script>
+        <script src="components/Sidebar.js"></script>
         <script src="components/LoadingView.js"></script>
-        <script src="components/ListView.js"></script>
+        <script src="components/ShareTopicsByEmail.js"></script>
         <script src="components/SuccessView.js"></script>
+        <script src="components/About.js"></script>
+        <script src="components/PersonalContactInformation.js"></script>
+        <script src="components/ShareContactByQRCode.js"></script>
+
 
         <!-- App launch -->
         <script src="config.js"></script>
