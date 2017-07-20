@@ -7,6 +7,12 @@ var ListView = {
     toggleKPI: function(kpi) {
         console.log(kpi);
     },
+    oninit: function(vnode) {
+        if (typeof config.kpis[0].data == "undefined") {
+            // KPI data not loaded, move to loading state...
+            m.route.set("/loading");
+        }
+    },
     view: function(vnode)  {
         return [
             m("header.fixed", [
