@@ -65,6 +65,20 @@ var analytics = {
 
         return total;
     },
+    filterByAction: function(action) {
+        this.loadJournal();
+        var entry = {};
+        var selected = [];
+        for (var i = 0; i < this.journal.length; i++) {
+            entry = this.journal[i];
+
+            if (entry.action == action) {
+                selected.push(entry);
+            }
+        }
+
+        return selected;
+    },
     downloadJournal: function() {
         this.loadJournal();
         var json = JSON.stringify(this.journal);

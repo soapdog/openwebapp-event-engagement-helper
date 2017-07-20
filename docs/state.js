@@ -95,7 +95,7 @@ var state = {
         var url = `mailto:${email}?subject=${subject}&body=${body}`;
         window.location.href = url;
 
-        analytics.recordAction("share-contact-by-email", {to: email, kpis: state.selectedKPIs});
+        analytics.recordAction("share-topics-by-email", {to: email, kpis: state.selectedKPIs});
 
         m.route.set("/success");
     }

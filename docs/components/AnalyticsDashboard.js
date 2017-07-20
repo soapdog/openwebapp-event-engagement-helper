@@ -4,14 +4,46 @@ var AnalyticsDashboard = {
     },
     summary: function() {
         var journal = analytics.getEntries();
-        return [
+        return m(".center", [
             m("h2", "Total interactions"),
             m("p.analytics-large", journal.length),
             m("h2", "Emails sent"),
             m("p.analytics-large", analytics.countEmails()),
             m("h2", "Contact Sent"),
             m("p.analytics-large", (analytics.countAction("share-contact-by-email") + analytics.countAction("share-contact-by-qr-code"))),
-        ]
+        ]);
+    },
+    topicsBreakout: function() {
+        var journal = analytics.getEntries();
+        var totals = {};
+        var entries = analytics.filterByAction("share-topics-by-email");
+        var entry = {};
+        var kpis = [];
+        var retVal = [
+            m("h2.separator", "Topics breakout")
+        ];
+
+        // Computing totals for each KPI
+        for (var i = 0; i < entries.length; i++) {
+            entry = entries[i];
+            entry.data.kpis.map(function(kpi) {
+                if (typeof totals[kpi] == "undefined") {
+                    totals[kpi] = 1;
+                } else {
+                    totals[kpi]++;
+                }
+            })
+        }
+
+        // Display totals
+        for (var kpi in totals) {
+            if( totals.hasOwnProperty(kpi) ) {
+                retVal.push(m("h2", kpi));
+                retVal.push(m("p.analytics-large", totals[kpi]));
+            } 
+        }    
+
+        return m(".center", retVal);
     },
     view: function(vnode) {
         return [
@@ -20,9 +52,8 @@ var AnalyticsDashboard = {
                 m(Header),
                 m("article.content.scrollable.header", [
                     m("h2.separator", "Analytics Dashboard"),
-                    m(".center", [
-                        this.summary()
-                    ]),
+                    this.summary(),
+                    this.topicsBreakout(),
                     m("br"),
                     m("button.recommend.go-subscribe-action", {onclick: this.downloadJournal},"Download Journal JSON")
                 ])
