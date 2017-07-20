@@ -3,7 +3,7 @@ m.route(document.body, "/loading", {
     "/success": SuccessView,
 
     "/share-topics-by-email": ShareTopicsByEmail,
-    "/share-contact-by-email": ShareTopicsByEmail,
+    "/share-contact-by-email": ShareContactByEmail,
 
     "/share-urls-by-qr-code": ShareTopicsByEmail,
     "/share-contact-by-qr-code": ShareContactByQRCode,
