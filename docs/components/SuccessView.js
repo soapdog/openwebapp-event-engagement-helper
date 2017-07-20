@@ -2,13 +2,6 @@ var SuccessView = {
     goBack: function(vnode) {
         m.route.set("/list");
     },
-    oncreate: function(vnode) {
-        console.log("email", state.email);
-        console.log("selected", state.selectedKPIs);
-        if (state.selectedKPIs.length > 0) {
-            state.sendKPIEmail();
-        }
-    },
     view: function(vnode) {
         return [
             m("header.fixed", [

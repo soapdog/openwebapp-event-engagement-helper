@@ -2,7 +2,11 @@ var ListView = {
     sendKPIEmails: function(ev) {
         ev.preventDefault();
         ev.stopPropagation();
-        m.route.set("/success");
+        console.log("email", state.email);
+        console.log("selected", state.selectedKPIs);
+        if (state.selectedKPIs.length > 0) {
+            state.sendKPIEmail();
+        }
     },
     toggleKPI: function(kpi) {
         console.log(kpi);
