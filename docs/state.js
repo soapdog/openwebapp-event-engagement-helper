@@ -94,6 +94,9 @@ var state = {
         var body = encodeURI(`${config.emailIntro}\n\n${KPIContent}\n\n${config.emailEnding}`);
         var url = `mailto:${email}?subject=${subject}&body=${body}`;
         window.location.href = url;
+
+        analytics.recordAction("share-contact-by-email", {to: email, kpis: state.selectedKPIs});
+
         m.route.set("/success");
     }
 }

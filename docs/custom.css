@@ -242,12 +242,17 @@ img {
 }
 
 h2.separator {
-      font-family: sans-serif;
-      padding: 0.4rem 3rem;
-      margin: -0.1rem 0 0.9rem;
-      border: solid 0.1rem #e8e8e8;
-      color: #666;
-      font-size: 1.8rem;
-      font-weight: 300;
-      background-color: #fff;
-    }
+    font-family: sans-serif;
+    padding: 0.4rem 3rem;
+    margin: -0.1rem 0 0.9rem;
+    border: solid 0.1rem #e8e8e8;
+    color: #666;
+    font-size: 1.8rem;
+    font-weight: 300;
+    background-color: #fff;
+}
+
+p.analytics-large {
+    color: darkred;
+    font-size: 3rem;
+}

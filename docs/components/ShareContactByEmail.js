@@ -37,7 +37,8 @@ var ShareContactByEmail = {
         
             window.location.href = `mailto:${to}?body=` + encodeURI(email);
 
-           
+            analytics.recordAction("share-contact-by-email", {to: to})
+
         } else {
             m.route.set("/info");
         }

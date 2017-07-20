@@ -9,7 +9,6 @@ m.route(document.body, "/loading", {
     "/share-contact-by-qr-code": ShareContactByQRCode,
 
     "/info": PersonalContactInformation,
-    "/export": ShareTopicsByEmail,
-    "/analytics": ShareTopicsByEmail,
+    "/analytics": AnalyticsDashboard,
     "/about": About
 });
