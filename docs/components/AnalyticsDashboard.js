@@ -2,6 +2,14 @@ var AnalyticsDashboard = {
     downloadJournal: function(vnode) {
         analytics.downloadJournal();
     },
+    eraseJournal: function() {
+        console.log("dangegour operation...");
+        var p = confirm("Are you sure you want to erase the journal data?");
+
+        if (p) {
+            analytics.eraseJournal();
+        }
+    },
     summary: function() {
         var journal = analytics.getEntries();
         return m(".center", [
@@ -55,7 +63,8 @@ var AnalyticsDashboard = {
                     this.summary(),
                     this.topicsBreakout(),
                     m("br"),
-                    m("button.recommend.go-subscribe-action", {onclick: this.downloadJournal},"Download Journal JSON")
+                    m("button.recommend.go-subscribe-action", {onclick: this.downloadJournal},"Download Journal JSON"),
+                    m("button.danger.go-subscribe-action", {onclick: this.eraseJournal},"Erase Analytics Data")
                 ])
             ])
         ]} 
