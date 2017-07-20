@@ -18,6 +18,9 @@ It was built with:
 * [Marked](https://github.com/chjj/marked) to process [markdown](http://markdown.org) files.
 * [QRious](https://neocotic.com/qrious/) to generate QR codes.
 
+# Source code
+The source code for it is available at [this github repository](https://github.com/soapdog/openwebapp-event-engagement-helper) and the license is 
+MPL-2.0.
 `,
     view: function(vnode) {
         return [
