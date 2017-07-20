@@ -39,25 +39,23 @@ var PersonalContactInformation = {
             m(Sidebar),
             m("section#drawer[role=region]", {class: state.drawerOpen ? "drawer-open" : "" }, [
                 m(Header),
-                m("[role=main]", [
-                    m("article.content.scrollable.header", [
-                        m("h2.separator", "Personal Contact Information"),
-                        m("form", [
-                            this.makeInput("name", "Your Name"),
-                            this.makeInput("email", "Email", "email"),
-                            this.makeInput("site", "Website"),
-                            this.makeInput("phone", "Phone number", "tel"),
-                        ]),
-                        m("h2.separator", "Social Networks"),
-                        m("form", [
-                            this.makeInput("twitter", "Twitter"),
-                            this.makeInput("github", "Github"),
-                            this.makeInput("mastodon", "Mastodon"),
-                            this.makeInput("mozillians", "Mozillians profile"),
-                        ]),
-                        m("br"),
-                        m("button.recommend.go-sign-up", {onclick: this.saveContactData}, config.saveButtonLabel)
-                    ])
+                m("article.content.scrollable.header", [
+                    m("h2.separator", "Personal Contact Information"),
+                    m("form", [
+                        this.makeInput("name", "Your Name"),
+                        this.makeInput("email", "Email", "email"),
+                        this.makeInput("site", "Website"),
+                        this.makeInput("phone", "Phone number", "tel"),
+                    ]),
+                    m("h2.separator", "Social Networks"),
+                    m("form", [
+                        this.makeInput("twitter", "Twitter"),
+                        this.makeInput("github", "Github"),
+                        this.makeInput("mastodon", "Mastodon"),
+                        this.makeInput("mozillians", "Mozillians profile"),
+                    ]),
+                    m("br"),
+                    m("button.recommend.go-sign-up", {onclick: this.saveContactData}, config.saveButtonLabel)
                 ])
             ])
         ]} 

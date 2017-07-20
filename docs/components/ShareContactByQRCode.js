@@ -6,7 +6,7 @@ var ShareContactByQRCode = {
             data = JSON.parse(data);
             console.log("loading from storage", data);
 
-            var mecard = `MECARD:N:${data.name};TEL:${data.phone};EMAIL:${data.email};URL:${data.site};`;
+            var mecard = `MECARD:N:${data.name};TEL:${data.phone};EMAIL:${data.email};`;
             
             if (data.twitter) {
                 mecard += `URL:${data.twitter};`
@@ -22,6 +22,10 @@ var ShareContactByQRCode = {
 
             if (data.mozillians) {
                 mecard += `URL:${data.mozillians};`
+            } 
+
+            if (data.site) {
+                mecard += `URL:${data.site};`
             } 
 
             const qr = new QRious({

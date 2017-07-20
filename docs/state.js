@@ -77,7 +77,7 @@ var state = {
     },
     sendKPIEmail: function() {
         var email = state.email;
-        var subject = config.emailSubject;
+        var subject = encodeURI(config.emailSubject);
         var KPIContent = state.selectedKPIs.reduce(function(acc, value) {
             var i = config.kpis.findIndex(function(el) {
                 return el.id == value;
@@ -90,11 +90,10 @@ var state = {
             return acc;
 
         }, "")
-        console.log(config.kpis);
+        console.log(KPIContent);
         var body = encodeURI(`${config.emailIntro}\n\n${KPIContent}\n\n${config.emailEnding}`);
         var url = `mailto:${email}?subject=${subject}&body=${body}`;
         window.location.href = url;
         m.route.set("/success");
-
     }
 }
